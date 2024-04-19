@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module04Navigation.TabbedPage1">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Hyungwon Pictures">
+        <StackLayout>
+            <ListView x:Name="HyungwonView" ItemsSource="{Binding Sanrios}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell ImageSource="{Binding Image}" Text="{Binding DisplayName}"
+                                    TextColor="Black">
+                            </ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        
+    </ContentPage>
+
+    <ContentPage Title="Form">
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Entry Placeholder="Do you like Hyungwon?" />
+            <Entry Placeholder="Rate Hyungwon from 1 - 100" Keyboard="Numeric" />
+            <Entry Placeholder="Why do you like Hyungwon?" />
+
+            <Button Text="Submit" BackgroundColor="#3CB371" CornerRadius="20" TextColor="White"/>
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Information">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Row="0">
+                <Image Source="https://favim.com/pd/s11/orig/7/764/7641/76412/chae-monsta-x-hyungwon-Favim.com-7641295.jpg" Margin="0,0,0,50"/>
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="1">
+                <Label Text="Full name"
+                       FontAttributes="Bold" />
+                <Label Text=" Chae Hyung Won (채형원)"
+                       LineBreakMode="WordWrap" />
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="2">
+                <Label Text="Birthday"
+                       FontAttributes="Bold" />
+                <Label Text="Birthday: January 15th, 1994"
+                       LineBreakMode="WordWrap" />
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" >
+                <Label Text="MBTI"
+           FontAttributes="Bold" />
+                <Label Text="INFP"
+           LineBreakMode="WordWrap" />
+            </StackLayout>
+        </Grid>
+
+    </ContentPage>
+</TabbedPage>
