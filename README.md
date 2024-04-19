@@ -4,7 +4,7 @@
 [Mainpage.xaml](Module04Navigation/MainPage.xaml)
 [Mainpage.xaml.cs](Module04Navigation/MainPage.xaml.cs)
 
-![Main Page](Pictures/Mainpage.png)
+![Main Page](Pictures/MainPage.png)
 
 ## TabbedPage
 [TabbedPage1.xaml](Module04Navigation/TabbedPage1.xaml)
